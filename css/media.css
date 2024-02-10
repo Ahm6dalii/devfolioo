@@ -1,0 +1,104 @@
+/* .............................media 776px................... */
+@media (min-width:776px) {
+.description{
+    padding:0 2.5rem;
+}
+}
+/* .............................media 992px................... */
+@media (min-width:992px) {
+    /* ...navbar... */
+    nav .navbar-nav {
+        background-color: transparent;
+        height: auto;
+        
+    }
+    
+    nav .navbar-nav > li > a {
+        color: #fff;
+        font-weight: 600;
+       
+    }
+    body:not(body:has(:target)) li a[href="#home"]::before,
+    body:has(.home:target) li a[href="#home"]::before,
+    body:has(.about:target) li a[href="#about"]::before,
+    body:has(.services:target) li a[href="#services"]::before,
+    body:has(.work:target) li a[href="#work"]::before,
+    body:has(.blog:target) li a[href="#blog"]::before,
+    body:has(.contact:target) li a[href="#contact"]::before{
+      width: 80%;
+    }
+    nav.navbar-expand-lg .navbar-nav .nav-link {
+        padding:0
+    }
+    nav .nav-item{
+        padding:10px 0 10px 30px ;
+    }
+
+    nav .nav-link:hover {
+        color: white;
+    }
+
+    nav .nav-link::before {
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        transition: 0.6s;
+    }
+    nav .nav-link:hover::before{
+        width: 80%;
+    }
+
+/* ...drop-down list.. */
+    .dropdown-dev .dropdown-submenu {
+        display: block;
+        position: absolute;
+        left: -100%;
+        top: -7px;
+        transform: translateX(20%);
+        transition: 0.5s all;
+        opacity: 0;
+    }
+
+    .dropdown-dev>li:hover>.dropdown-submenu {
+        transform: translatex(0);
+        opacity: 1;
+        height: auto;
+    }
+
+    .dropdown-dev {
+        transform: translatey(20%);
+        transition: 0.5s all;
+    }
+
+    .navbar-nav>li:hover>.dropdown-dev {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* header */
+    .home .h1-title-dev {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+
+/* ....................carousel........ */
+.description{
+    padding:0 8rem;
+}
+/* .......................contact.......... */
+.contact-sec{
+    padding: 3rem;
+}
+}
+/* ..............................media 1200.................... */
+@media (min-width:1200px) {
+    .dropdown-dev .dropdown-submenu {
+        left: 100%;
+        transform: translateX(-20%);
+    }
+
+}
